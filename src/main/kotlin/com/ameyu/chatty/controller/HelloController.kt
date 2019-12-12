@@ -2,12 +2,11 @@ package com.ameyu.chatty.controller
 
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
-
+//TODO change to websocket controller
 @RestController
-@RequestMapping("hello")
 open class HelloController{
-    @RequestMapping("/")
+    @RequestMapping("")
     open fun home():String{
-        return "OK body"
+        return "index"
     }
 }
