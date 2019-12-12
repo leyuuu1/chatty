@@ -1,8 +1,15 @@
+
 ## Chatty
 WebChatServer based on Spring-boot
 ## Feature
-- [] Coming soon...
-### how to login
+- [ ] Editing
+## Design
+|URL|TO|
+| -- | -- |
+|/|Home page|
+|/chat/XXX|Chat channel(ws)|
+
+#### How to login
 - Email + Password(Basic)
 - Two step auth(If time permits)
 ### What can user do
@@ -12,12 +19,8 @@ WebChatServer based on Spring-boot
 - etc
 ## Author
 Ame-yu
-### How to Contribute
-Fork this project or star it.
-```
-/ => User page
-/chat/XXX Channel(Chat room)
-```
+
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 
