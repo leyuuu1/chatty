@@ -21,9 +21,9 @@ WebChatServer based on Spring-boot
 Ame-yu
 
 ### Config
-HOST:redis-18238.c90.us-east-1-3.ec2.cloud.redislabs.com
+HOST:redis-17610.c1.asia-northeast1-1.gce.cloud.redislabs.com
 
-PORT:18238
+PORT:17610
 
 ### Reference Documentation
 For further reference, please consider the following sections:
