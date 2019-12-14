@@ -20,6 +20,10 @@ WebChatServer based on Spring-boot
 ## Author
 Ame-yu
 
+### Config
+HOST:redis-18238.c90.us-east-1-3.ec2.cloud.redislabs.com
+
+PORT:18238
 
 ### Reference Documentation
 For further reference, please consider the following sections:
