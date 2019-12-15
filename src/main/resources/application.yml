@@ -8,3 +8,6 @@ spring:
     password: "!QAZ2wsx"
     #host: 127.0.0.1
     #port: 6379
+#logging:
+#  level:
+#    org.springframework: DEBUG

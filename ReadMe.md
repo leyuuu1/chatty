@@ -17,6 +17,11 @@ WebChatServer based on Spring-boot
 | -- | -- |
 |/|Home page|
 |/chat/XXX|Chat channel(ws)|
+
+#### command
+- Main command
+  - @username = start private chat
+  - #channelName = enter channel room
 #### How to login
 - Email + Password(Basic)
 - ~~Two step auth(If time permits)~~

@@ -3,7 +3,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ChattyApplication
+open class ChattyApplication
 
 fun main(args: Array<String>) {
     runApplication<ChattyApplication>(*args)

@@ -17,5 +17,4 @@ open class Greater{
         //Return visitor number
         return "You are $num arrive here!"
     }
-
 }
