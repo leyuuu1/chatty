@@ -2,10 +2,11 @@
 ## Chatty
 WebChatServer based on Spring-boot
 ## Milestone
-:white_check_mark: config Spring-boot enviroment <br>
-:white_large_square: open basic ws port <br>
+:white_check_mark: config Spring-boot environment <br>
+:white_check_mark: open basic ws port <br>
 :white_large_square: integrate with Redis <br>
-:white_large_square: deploy to web  
+:white_large_square: login authentication system <br>
+:white_large_square: deploy to server
 ## Design
 |URL|TO|
 | -- | -- |
