@@ -1,4 +1,3 @@
-
 ## Chatty
 WebChatServer based on Spring-boot
 ## Milestone
@@ -7,26 +6,32 @@ WebChatServer based on Spring-boot
 :white_large_square: integrate with Redis <br>
 :white_large_square: login authentication system <br>
 :white_large_square: deploy to server
+
 ## Design
+> `Architecture`
+> Language：Kotlin
+> Framework：Spring-boot
+> Database：Redis
+
 |URL|TO|
 | -- | -- |
 |/|Home page|
 |/chat/XXX|Chat channel(ws)|
-
 #### How to login
 - Email + Password(Basic)
-- Two step auth(If time permits)
+- ~~Two step auth(If time permits)~~
 ### What can user do
 - register
 - login
 - join a chat room
 - etc
+### Reference
+[前端页面源码](https://gitee.com/cloudfile/chatty_web)
 ## Author
 Ame-yu
 
 ### Config
 HOST:redis-17610.c1.asia-northeast1-1.gce.cloud.redislabs.com
-
 PORT:17610
 
 ### Reference Documentation
