@@ -9,9 +9,9 @@ WebChatServer based on Spring-boot
 
 ## Design
 > `Architecture`
-> Language：Kotlin
-> Framework：Spring-boot
-> Database：Redis
+> - Language：Kotlin
+> - Framework：Spring-boot
+> - Database：Redis
 
 |URL|TO|
 | -- | -- |
@@ -26,7 +26,7 @@ WebChatServer based on Spring-boot
 - join a chat room
 - etc
 ### Reference
-[前端页面源码](https://gitee.com/cloudfile/chatty_web)
+[Web page source code](https://gitee.com/cloudfile/chatty_web)
 ## Author
 Ame-yu
 
