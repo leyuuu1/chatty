@@ -30,7 +30,11 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 }
-
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
 test {
 	useJUnitPlatform()
 }
