@@ -28,28 +28,38 @@ open class WsConfig: WebSocketConfigurer {
 class ChatWebSocketHandler : TextWebSocketHandler() {
     companion object{
         const val ROOM = "public"
-        var onlineCount:Int = 0
+        var pool:ArrayList<WebSocketSession> = arrayListOf()
     }
     @Autowired
     var redisTemplate: StringRedisTemplate? = null
     private val logger = LoggerFactory.getLogger(javaClass)
     override fun afterConnectionEstablished(session: WebSocketSession) {
+        pool.add(session)
         redisTemplate!!.opsForList()
                 .range(ROOM, -10, -1)
                 ?.forEach{
-                    session?.sendMessage(TextMessage(it))
+                    session.sendMessage(TextMessage(it))
                 }
-        println("Opened new session in instance $this")
     }
 
-    override fun handleTextMessage(session: WebSocketSession, message: TextMessage) { //组装返回的Echo信息
+    override fun afterConnectionClosed(session: WebSocketSession, status: CloseStatus) {
+        pool.remove(session)
+    }
+
+    override fun handleTextMessage(session: WebSocketSession, message: TextMessage) {
         redisTemplate!!.opsForList().rightPush(ROOM,message.payload)
-        println(message.payload)
+        transmit(session,message.payload)
     }
 
     override fun handleTransportError(session: WebSocketSession, exception: Throwable) {
         session.close(CloseStatus.SERVER_ERROR)
         println("Info: WebSocket connection closed.")
+    }
+
+    fun transmit(submitter:WebSocketSession,msg:String){
+        pool.filter { it!=submitter }.forEach{
+            it.sendMessage(TextMessage(msg))
+        }
     }
 }
 
