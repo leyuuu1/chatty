@@ -33,7 +33,7 @@ class ChatWebSocketHandler : TextWebSocketHandler() {
     @Autowired
     var redisTemplate: StringRedisTemplate? = null
     private val logger = LoggerFactory.getLogger(javaClass)
-    override fun afterConnectionEstablished(session: WebSocketSession?) {
+    override fun afterConnectionEstablished(session: WebSocketSession) {
         redisTemplate!!.opsForList()
                 .range(ROOM, -10, -1)
                 ?.forEach{
@@ -47,7 +47,7 @@ class ChatWebSocketHandler : TextWebSocketHandler() {
         println(message.payload)
     }
 
-    override fun handleTransportError(session: WebSocketSession, exception: Throwable?) {
+    override fun handleTransportError(session: WebSocketSession, exception: Throwable) {
         session.close(CloseStatus.SERVER_ERROR)
         println("Info: WebSocket connection closed.")
     }
