@@ -50,7 +50,7 @@ class ChatWebSocketHandler : TextWebSocketHandler() {
     }
 
     override fun handleTextMessage(session: WebSocketSession, message: TextMessage) { //组装返回的Echo信息
-        redisTemplate!!.opsForList().leftPush(ROOM,message.payload)
+        redisTemplate!!.opsForList().rightPush(ROOM,message.payload)
         println(message.payload)
     }
 
