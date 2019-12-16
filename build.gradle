@@ -35,6 +35,12 @@ compileKotlin {
         jvmTarget = '1.8'
     }
 }
-test {
-	useJUnitPlatform()
+
+tasks{
+    test {
+	    useJUnitPlatform()
+    }
+    bootJar {
+        archiveFileName.set("app.jar")
+    }
 }
