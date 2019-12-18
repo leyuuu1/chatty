@@ -13,14 +13,15 @@ WebChatServer based on Spring-boot
 > - Framework：Spring-boot
 > - Database：Redis
 
-|URL|TO|
-| -- | -- |
-|/|Home page|
-|/chat/XXX|Chat channel(ws)|
+|URL|TO|PROTOCOL|
+| -- | -- | -- |
+|/|Home page|Http|
+|/chat|public chat|ws|
+|/room/XXX|Chat channel|ws|
 
 #### command
 - Main command
-  - @username = start private chat
+  - ~~@username = start private chat~~
   - #channelName = enter channel room
 #### How to login
 - Email + Password(Basic)
