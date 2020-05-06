@@ -3,9 +3,9 @@ server:
 spring:
   redis:
     database: 0
-    host: "redis-17610.c1.asia-northeast1-1.gce.cloud.redislabs.com"
-    port: 17610
-    password: "!QAZ2wsx"
+    host: 39.107.26.81
+    port: 6379
+    #password: "!QAZ2wsx"
     #host: 127.0.0.1
     #port: 6379
 #logging:
